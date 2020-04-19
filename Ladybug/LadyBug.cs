@@ -13,6 +13,10 @@ public class LadyBug : KinematicBody, WaterCompatible
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
+        FindTarget();
+    }
+
+    void FindTarget(){
         var children = GetNode("/root/World").GetChildren();
         ArrayList FlowerSlots = new ArrayList();
         foreach(var c in children){
@@ -45,11 +49,16 @@ public class LadyBug : KinematicBody, WaterCompatible
     {
         if(mDestination != null && mIsAlive)
         {
-            Translate((mDestination.GetTranslation() - GetTranslation()).Normalized() * Speed * delta);
-            if(GetTranslation().DistanceTo(mDestination.GetTranslation()) <= DistanceTouch){
-                mIsAlive = false;
-                mDestination.QueueFree();
-                QueueFree();
+
+            try{
+                LookAt(mDestination.GetTranslation(), Vector3.Up);
+                Translate((mDestination.GetTranslation() - GetTranslation()).Normalized() * Speed * delta);
+                if(GetTranslation().DistanceTo(mDestination.GetTranslation()) <= DistanceTouch){
+                    mDestination.QueueFree();
+                    QueueFree();
+                }
+            }catch(Exception e){
+                FindTarget();
             }
         }
         // Translate((GetTranslation() - mDestination.GetTranslation()).Normalized() * Speed * delta);

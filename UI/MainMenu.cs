@@ -8,7 +8,6 @@ public class MainMenu : Control
     {
     }
 
-
     private void _on_StartGameButton_pressed()
     {
         GetTree().ChangeScene("res://Scenes/GameScene_1.tscn");

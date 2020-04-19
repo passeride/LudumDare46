@@ -141,6 +141,18 @@ tracks/12/keys = {
 "method": "queue_free"
 } ]
 }
+tracks/13/type = "value"
+tracks/13/path = NodePath("CollisionShape:disabled")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [node name="LadyBug" type="KinematicBody" groups=[
 "Enemy",

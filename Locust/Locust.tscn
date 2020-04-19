@@ -4,7 +4,7 @@
 [ext_resource path="res://Locust/Locust.cs" type="Script" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
-radius = 0.800247
+radius = 1.12624
 height = 3.1176
 
 [sub_resource type="Animation" id=3]
@@ -96,6 +96,18 @@ tracks/6/keys = {
 "method": "queue_free"
 } ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("CollisionShape:disabled")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=2]
 resource_name = "LocustFlying"
@@ -153,7 +165,7 @@ script = ExtResource( 2 )
 Speed = 15.0
 
 [node name="Locust" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 0.919756, 0.392491, 0, -0.392491, 0.919756, 0, 0.742982, 0 )
 
 [node name="LocustWingLeft" parent="Locust" index="0"]
 transform = Transform( 0.982609, 0.169349, 0.0761631, -0.159885, 0.980207, -0.116755, -0.0944279, 0.102547, 0.990236, 0, 0.630248, 0.00813448 )
@@ -162,7 +174,7 @@ transform = Transform( 0.982609, 0.169349, 0.0761631, -0.159885, 0.980207, -0.11
 transform = Transform( 0.972885, 0.181368, 0.143529, -0.169094, 0.981142, -0.0936314, -0.157804, 0.0668227, 0.985207, 0, 0.630248, 0.00813448 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.560875, -0.304501 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.238201, -0.304501 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

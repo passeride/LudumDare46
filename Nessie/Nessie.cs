@@ -19,10 +19,6 @@ public class Nessie : Spatial, WaterCompatible, DirtCompatible
     public override void _Ready()
     {
         mAnim = (AnimationPlayer)GetNode("AnimationPlayer");
-        var pos = GetTranslation();
-        var cam = GetTree().GetRoot().GetCamera();
-        var screenPos = cam.UnprojectPosition(pos);
-        ((Control)GetNode("UI")).SetPosition(screenPos);
         mSpeachBubble = ((SpeachBubble)GetNode("UI/SpeachBubble"));
         mSpeachBubble.Visible = false;
     }
@@ -84,6 +80,12 @@ public class Nessie : Spatial, WaterCompatible, DirtCompatible
     //  // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
+
+        var pos = GetTranslation();
+        var cam = GetTree().GetRoot().GetCamera();
+        var screenPos = cam.UnprojectPosition(pos);
+        ((Control)GetNode("UI")).SetPosition(screenPos);
+
         mThirst -= WaterDrainPrSec * delta;
         mHunger -= FoodDrainPrSec * delta;
 

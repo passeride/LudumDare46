@@ -7,6 +7,7 @@ public class Player : KinematicBody
     // private int a = 2;
     // private string b = "text";
 
+    [Export] public bool ThirdPerson = true;
     [Export] public float Speed = 200.0f;
     [Export] public float DashLength = 5.0f;
     [Export] public float DashCoolDown = 0.8f;
