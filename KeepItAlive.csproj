@@ -53,16 +53,23 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="3D%20Assets\NessieBall.cs" />
+    <Compile Include="Enviroment\DirtBall.cs" />
     <Compile Include="Enviroment\Droplet.cs" />
     <Compile Include="Enviroment\FlowerPot.cs" />
     <Compile Include="Enviroment\FlowerSlot.cs" />
+    <Compile Include="Enviroment\Pickups\SunflowerPickup.cs" />
+    <Compile Include="Ladybug\LadyBug.cs" />
     <Compile Include="Nessie\Nessie.cs" />
     <Compile Include="Player\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\Eyeball.cs" />
+    <Compile Include="Scripts\MainCamera.cs" />
     <Compile Include="UI\EquipmentSlot.cs" />
     <Compile Include="UI\SlotBar.cs" />
     <Compile Include="UI\SpeachBubble.cs" />
     <Compile Include="Scripts/Interfaces/WaterCompatible.cs" />
+    <Compile Include="Scripts/Interfaces/DirtCompatible.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

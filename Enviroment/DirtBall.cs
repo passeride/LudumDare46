@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Droplet : Area
+public class DirtBall : Area
 {
     Vector3 direction = Vector3.Up;
     [Export] public float Speed = 30.0f;
@@ -13,14 +13,14 @@ public class Droplet : Area
         this.SetTranslation(pos);
     }
 
-    private void _on_Droplet_body_entered(object body)
+    private void _on_DirtBall_body_entered(object body)
     {
-        if(( (Node)body ).GetGroups().Contains("WaterCompatible")){
-            var waterCompatible = (WaterCompatible)body;
-            waterCompatible.AddWater();
+        if(( (Node)body ).GetGroups().Contains("DirtCompatible")){
+            var dirtCompatible = (DirtCompatible)body;
+            dirtCompatible.AddDirt();
 
             move = false;
-            ((AnimationPlayer)GetNode("AnimationPlayer")).Play("DropletHit", -1, 1, false);
+            ((AnimationPlayer)GetNode("AnimationPlayer")).Play("DirtballHit", -1, 1, false);
         }
     }
 

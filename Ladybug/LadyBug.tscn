@@ -1,0 +1,167 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://3D Assets/LadyBug.dae" type="PackedScene" id=1]
+[ext_resource path="res://Ladybug/LadyBug.cs" type="Script" id=2]
+
+[sub_resource type="SphereShape" id=1]
+
+[sub_resource type="Animation" id=2]
+resource_name = "LadybugDyingAnimation"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("LadyBug:rotation_degrees:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.3, 0.4, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("LadyBug:rotation_degrees:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.3, 0.4, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("LadyBug:rotation_degrees:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 9.871, -0.25, 0, 0.25, 0, -172.554, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.3, 0.4, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("LadyBug:translation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = false
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.3, 1 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("LadyBug:translation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = false
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -0.225051, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.3, 1 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("LadyBug:translation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = false
+tracks/5/keys = {
+"points": PoolRealArray( -1, -0.25, 0, 0.25, 0, -1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.3, 1 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("LadyBug/LadyBugWingL:rotation_degrees:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( -17.0302, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("LadyBug/LadyBugWingL:rotation_degrees:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 26.1873, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("LadyBug/LadyBugWingL:rotation_degrees:z")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( -8.17862, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("LadyBug/LadyBugWingR:rotation_degrees:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( -10.4971, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("LadyBug/LadyBugWingR:rotation_degrees:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( -15.6575, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("LadyBug/LadyBugWingR:rotation_degrees:z")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( -6.04405, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3 )
+}
+tracks/12/type = "method"
+tracks/12/path = NodePath(".")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+
+[node name="LadyBug" type="KinematicBody" groups=[
+"Enemy",
+"WaterCompatible",
+]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.359, 0 )
+script = ExtResource( 2 )
+
+[node name="LadyBug" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.98023e-08, -1 )
+
+[node name="LadyBugWingL" parent="LadyBug" index="2"]
+transform = Transform( 0.906616, -0.000276357, 0.421957, -0.136022, 0.946426, 0.292876, -0.399432, -0.322921, 0.858007, 0, 0, 0.226092 )
+
+[node name="LadyBugWingR" parent="LadyBug" index="3"]
+transform = Transform( 0.952362, 0.150282, -0.265369, -0.103531, 0.977798, 0.182187, 0.286857, -0.146034, 0.946777, 0, 0, 0.163599 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/LadybugDyingAnimation = SubResource( 2 )
+
+[editable path="LadyBug"]

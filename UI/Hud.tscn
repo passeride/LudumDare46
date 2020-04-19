@@ -3,14 +3,16 @@
 [node name="Hud" type="MarginContainer"]
 anchor_top = 1.0
 anchor_bottom = 1.0
+margin_left = 0.950012
 margin_top = -600.0
-margin_right = 1024.0
+margin_right = 1024.95
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
+visible = false
 margin_top = 293.0
-margin_right = 1024.0
+margin_right = 1023.0
 margin_bottom = 307.0
 text = "Why am i the way i am?"

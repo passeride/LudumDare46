@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Enviroment/Floor.tscn" type="PackedScene" id=2]
@@ -10,11 +10,13 @@
 [ext_resource path="res://Enviroment/DirtPile.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Nessie/Nessie.tscn" type="PackedScene" id=9]
 [ext_resource path="res://UI/SlotBar.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Ladybug/LadyBug.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scripts/MainCamera.cs" type="Script" id=12]
 
 [sub_resource type="Environment" id=1]
 background_energy = 0.0
 ambient_light_color = Color( 0.996078, 0.992157, 0.992157, 1 )
-ambient_light_energy = 0.66
+ambient_light_energy = 0.37
 ambient_light_sky_contribution = 0.0
 tonemap_mode = 1
 tonemap_exposure = 0.51
@@ -42,6 +44,9 @@ DashLength = 3.0
 transform = Transform( 1, 0, 0, 0, 0.233903, 0.97226, 0, -0.97226, 0.233903, 0.364122, 9.90871, 5.11906 )
 environment = SubResource( 1 )
 current = true
+fov = 94.5
+script = ExtResource( 12 )
+CameraTargetNodePath = "../Player"
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.851663, 0.428405, -0.301893, 0.52409, -0.696172, 0.490586, 0, -0.576033, -0.817427, 0, 5.94338, 0 )
@@ -55,6 +60,7 @@ collision_mask = 2
 
 [node name="SingelBench" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73668, -1.49012e-07, 3.22158 )
+FlowerTotalWaterNeed = 10
 
 [node name="FlowerPot" parent="SingelBench" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0725536, 0.85071, 0 )
@@ -91,3 +97,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.91393, 0, 8.05179 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.48364, 0.0219693, 0 )
 
 [node name="SlotBar" parent="." instance=ExtResource( 10 )]
+
+[node name="LadyBug" parent="." instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.45383, 0, 8.26505 )

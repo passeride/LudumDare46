@@ -12,6 +12,7 @@ extents = Vector3( 0.633118, 1, 0.585646 )
 radius = 1.54044
 
 [node name="SingelBench" type="StaticBody" groups=[
+"DirtCompatible",
 "PlantSlot",
 "WaterCompatible",
 ]]
