@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://3D Assets/SingelBench.dae" type="PackedScene" id=1]
+[ext_resource path="res://Enviroment/FlowerPot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Enviroment/FlowerSlot.cs" type="Script" id=3]
+[ext_resource path="res://UI/SpeachBubble.tscn" type="PackedScene" id=4]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.633118, 1, 0.585646 )
+
+[sub_resource type="CylinderShape" id=2]
+radius = 1.54044
+
+[node name="SingelBench" type="StaticBody" groups=[
+"PlantSlot",
+"WaterCompatible",
+]]
+script = ExtResource( 3 )
+
+[node name="SingelBench" parent="." groups=[
+"PlantSlot",
+] instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 1 )
+
+[node name="FlowerPot" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.167225, 0.830794, 0 )
+
+[node name="TriggerArea" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="TriggerArea"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 2 )
+
+[node name="UI" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WaterMeter" type="ColorRect" parent="UI"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -20.3074
+margin_top = 0.663437
+margin_right = -5.30737
+margin_bottom = 41.6634
+rect_rotation = -180.0
+color = Color( 0, 0.309804, 0.968627, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpeachBubble" parent="UI" instance=ExtResource( 4 )]
+margin_left = 1.67324
+margin_top = -40.2787
+margin_right = 1.67324
+margin_bottom = -40.2787
+[connection signal="body_entered" from="TriggerArea" to="." method="_on_TriggerArea_body_entered"]
+[connection signal="body_exited" from="TriggerArea" to="." method="_on_TriggerArea_body_exited"]

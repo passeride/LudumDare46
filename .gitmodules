@@ -1,0 +1,3 @@
+[submodule "Fonts/emojione-color"]
+	path = Fonts/emojione-color
+	url = https://github.com/adobe-fonts/emojione-color.git

@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://3D Assets/FlowerPot.dae" type="PackedScene" id=1]
+[ext_resource path="res://3D Assets/PotFill.dae" type="PackedScene" id=2]
+[ext_resource path="res://3D Assets/Sunflower.dae" type="PackedScene" id=3]
+[ext_resource path="res://Enviroment/FlowerPot.cs" type="Script" id=4]
+
+[node name="FlowerPot" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="FlowerPot" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+
+[node name="PotFill" parent="FlowerPot" instance=ExtResource( 2 )]
+visible = false
+
+[node name="Sunflower" parent="FlowerPot" instance=ExtResource( 3 )]
+visible = false

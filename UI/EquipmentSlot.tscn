@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Vector/path1945.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/EmojiFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://UI/EquipmentSlot.cs" type="Script" id=3]
+
+[node name="EquipmentSlot" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -65.0
+margin_top = -65.0
+margin_right = 66.0
+margin_bottom = 66.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+selectedColor = Color( 0, 1, 0.0627451, 1 )
+
+[node name="SlotBackground" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -44.9345
+margin_top = -48.505
+margin_right = 44.9345
+margin_bottom = 48.505
+texture = ExtResource( 1 )
+expand = true
+
+[node name="SlotOutline" type="TextureRect" parent="SlotBackground"]
+self_modulate = Color( 0.411765, 0.411765, 0.411765, 1 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 11.0
+margin_bottom = 11.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="SlotBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0.603922, 0.968627, 1 )
+text = "💧"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

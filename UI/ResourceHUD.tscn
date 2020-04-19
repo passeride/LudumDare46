@@ -1,0 +1,40 @@
+[gd_scene format=2]
+
+[node name="ResourceHUD" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.37735
+margin_right = 0.377319
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WaterMeter" type="ColorRect" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 13.7106
+margin_top = -125.285
+margin_right = 33.7106
+margin_bottom = -25.2852
+grow_vertical = 0
+rect_rotation = 180.0
+rect_pivot_offset = Vector2( 14.0001, 49.3 )
+color = Color( 0.0470588, 0.247059, 0.843137, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DirtMeter" type="ColorRect" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 51.1957
+margin_top = -125.442
+margin_right = 71.1957
+margin_bottom = -25.4424
+grow_vertical = 0
+rect_rotation = 180.0
+rect_pivot_offset = Vector2( 14.0001, 49.3 )
+color = Color( 0.231373, 0.14902, 0.0470588, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
