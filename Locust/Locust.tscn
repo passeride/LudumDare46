@@ -1,0 +1,174 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://3D Assets/Locust.dae" type="PackedScene" id=1]
+[ext_resource path="res://Locust/Locust.cs" type="Script" id=2]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.800247
+height = 3.1176
+
+[sub_resource type="Animation" id=3]
+resource_name = "LocustDying"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Locust:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3.4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( -24.8124, 0, 0 ), Vector3( 95.595, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Locust:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3.4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0.797729, 0 ), Vector3( 0, -0.0645759, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Locust/LocustWingLeft:translation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0.630248, 0.00813448 ), Vector3( 0, 0.630248, 0.00813448 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Locust/LocustWingLeft:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.9, 2.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 56.3517, -45.6577, -24.776 ), Vector3( 56.3517, -45.6577, -24.776 ), Vector3( 6.70485, 4.39819, -9.26415 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Locust/LocustWingRight:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.9, 2.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 51.643, 13.373, 0 ), Vector3( 51.643, 13.373, 0 ), Vector3( 5.37255, 8.28877, -9.77851 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Locust/LocustWingRight:translation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0.630248, 0.00813448 ), Vector3( 0, 0.630248, 0.00813448 ) ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "LocustFlying"
+length = 0.2
+loop = true
+step = 0.01
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Locust/LocustWingLeft:rotation_degrees:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 56.3517, -0.025, 0, 0.025, 0, 14.7688, -0.025, 0, 0.025, 0, 56.3517, -0.025, 0, 0.025, 0 ),
+"times": PoolRealArray( 0, 0.1, 0.2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Locust/LocustWingLeft:rotation_degrees:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -45.6577, -0.025, 0, 0.025, 0, -18.1183, -0.025, 0, 0.025, 0, -42.3948, -0.025, 0, 0.025, 0 ),
+"times": PoolRealArray( 0, 0.1, 0.2 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Locust/LocustWingLeft:rotation_degrees:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( -24.776, -0.025, 0, 0.025, 0, 3.01829, -0.025, 0, 0.025, 0, -24.776, -0.025, 0, 0.025, 0 ),
+"times": PoolRealArray( 0, 0.1, 0.2 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Locust/LocustWingRight:rotation_degrees")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 51.643, 13.373, 0 ), Vector3( -7.1809, -4.27399, -11.5022 ), Vector3( 51.643, 13.373, 0 ) ]
+}
+
+[node name="Locust" type="KinematicBody" groups=[
+"Enemy",
+"WaterCompatible",
+]]
+script = ExtResource( 2 )
+Speed = 15.0
+
+[node name="Locust" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="LocustWingLeft" parent="Locust" index="0"]
+transform = Transform( 0.982609, 0.169349, 0.0761631, -0.159885, 0.980207, -0.116755, -0.0944279, 0.102547, 0.990236, 0, 0.630248, 0.00813448 )
+
+[node name="LocustWingRight" parent="Locust" index="1"]
+transform = Transform( 0.972885, 0.181368, 0.143529, -0.169094, 0.981142, -0.0936314, -0.157804, 0.0668227, 0.985207, 0, 0.630248, 0.00813448 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.560875, -0.304501 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_process_mode = 0
+method_call_mode = 1
+anims/LocustDying = SubResource( 3 )
+anims/LocustFlying = SubResource( 2 )
+
+[editable path="Locust"]

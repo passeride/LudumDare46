@@ -26,19 +26,3 @@ margin_left = -43.3457
 margin_top = 5.30713
 margin_right = -43.3457
 margin_bottom = 5.30713
-
-[node name="EquipmentSlot3" parent="." instance=ExtResource( 1 )]
-anchor_top = 0.874
-anchor_bottom = 0.874
-margin_left = 80.2968
-margin_top = 5.30713
-margin_right = 80.2968
-margin_bottom = 5.30713
-
-[node name="EquipmentSlot4" parent="." instance=ExtResource( 1 )]
-anchor_top = 0.874
-anchor_bottom = 0.874
-margin_left = 207.549
-margin_top = 5.30713
-margin_right = 207.549
-margin_bottom = 5.30713

@@ -60,12 +60,16 @@
     <Compile Include="Enviroment\FlowerSlot.cs" />
     <Compile Include="Enviroment\Pickups\SunflowerPickup.cs" />
     <Compile Include="Ladybug\LadyBug.cs" />
+    <Compile Include="Locust\Locust.cs" />
+    <Compile Include="Locust\LocustSpawner.cs" />
     <Compile Include="Nessie\Nessie.cs" />
     <Compile Include="Player\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scripts\Eyeball.cs" />
+    <Compile Include="Scripts\LadyBugSpawner.cs" />
     <Compile Include="Scripts\MainCamera.cs" />
     <Compile Include="UI\EquipmentSlot.cs" />
+    <Compile Include="UI\MainMenu.cs" />
     <Compile Include="UI\SlotBar.cs" />
     <Compile Include="UI\SpeachBubble.cs" />
     <Compile Include="Scripts/Interfaces/WaterCompatible.cs" />

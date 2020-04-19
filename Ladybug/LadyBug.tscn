@@ -148,15 +148,16 @@ tracks/12/keys = {
 ]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.359, 0 )
 script = ExtResource( 2 )
+Speed = 5.0
 
 [node name="LadyBug" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.98023e-08, -1 )
 
 [node name="LadyBugWingL" parent="LadyBug" index="2"]
-transform = Transform( 0.906616, -0.000276357, 0.421957, -0.136022, 0.946426, 0.292876, -0.399432, -0.322921, 0.858007, 0, 0, 0.226092 )
+transform = Transform( 0.906617, -0.000276029, 0.421956, -0.136022, 0.946426, 0.292876, -0.399431, -0.322921, 0.858008, 0, 0, 0.226092 )
 
 [node name="LadyBugWingR" parent="LadyBug" index="3"]
-transform = Transform( 0.952362, 0.150282, -0.265369, -0.103531, 0.977798, 0.182187, 0.286857, -0.146034, 0.946777, 0, 0, 0.163599 )
+transform = Transform( 0.952362, 0.150282, -0.265369, -0.103531, 0.977798, 0.182186, 0.286857, -0.146033, 0.946777, 0, 0, 0.163599 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 1 )

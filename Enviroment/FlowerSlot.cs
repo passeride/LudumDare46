@@ -39,6 +39,10 @@ public class FlowerSlot : StaticBody, WaterCompatible, DirtCompatible
             mPot.SetPotState(FlowerPot.PotState.FILLED);
     }
 
+    public FlowerPot.PotState GetState(){
+        return mPot!= null ? mPot.GetPotState() : FlowerPot.PotState.EMPTY;
+    }
+
     public void SetStatusMessage(){
         if(mPot.GetPotState() == FlowerPot.PotState.EMPTY){
             mSpeachBubble.SetMessage("💩", new Color(0.5f, 0.7f, 0.2f));

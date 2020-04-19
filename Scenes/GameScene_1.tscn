@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Enviroment/Floor.tscn" type="PackedScene" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://UI/SlotBar.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Ladybug/LadyBug.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scripts/MainCamera.cs" type="Script" id=12]
+[ext_resource path="res://Ladybug/LadyBugSpawner.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Locust/LocustSpawner.tscn" type="PackedScene" id=15]
 
 [sub_resource type="Environment" id=1]
 background_energy = 0.0
@@ -37,16 +39,19 @@ adjustment_saturation = 0.65
 transform = Transform( 6.30801, 0, 0, 0, 1, 0, 0, 0, 6.30801, 0, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-Speed = 20.0
+Speed = 30.0
 DashLength = 3.0
+WaterShotCost = 1
+DirtShotCost = 1
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.233903, 0.97226, 0, -0.97226, 0.233903, 0.364122, 9.90871, 5.11906 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, -12.0677, 26.2078, 0.659982 )
 environment = SubResource( 1 )
 current = true
-fov = 94.5
+fov = 85.0
 script = ExtResource( 12 )
 CameraTargetNodePath = "../Player"
+ActivateFollow = true
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.851663, 0.428405, -0.301893, 0.52409, -0.696172, 0.490586, 0, -0.576033, -0.817427, 0, 5.94338, 0 )
@@ -58,37 +63,38 @@ shadow_bias = 0.42
 enabled = true
 collision_mask = 2
 
-[node name="SingelBench" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73668, -1.49012e-07, 3.22158 )
-FlowerTotalWaterNeed = 10
+[node name="SingelBench8" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.131902, -1.49012e-07, 10.1251 )
 
-[node name="FlowerPot" parent="SingelBench" instance=ExtResource( 4 )]
+[node name="FlowerPot2" parent="SingelBench8" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0725536, 0.85071, 0 )
 
-[node name="SingelBench2" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.65634, -1.49012e-07, 3.22158 )
+[node name="SingelBench3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5542, -1.49012e-07, 10.1251 )
 
-[node name="FlowerPot" parent="SingelBench2" instance=ExtResource( 4 )]
+[node name="FlowerPot2" parent="SingelBench3" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0725536, 0.85071, 0 )
 
-[node name="SingelBench4" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.53112, -1.49012e-07, 3.22158 )
+[node name="SingelBench7" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.5058, -1.49012e-07, -13.0512 )
 
-[node name="FlowerPot" parent="SingelBench4" instance=ExtResource( 4 )]
+[node name="FlowerPot2" parent="SingelBench7" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0725536, 0.85071, 0 )
 
-[node name="SingelBench5" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.96457, -1.49012e-07, 3.22158 )
+[node name="SingelBench6" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.9393, -1.49012e-07, 0.980061 )
 
-[node name="FlowerPot" parent="SingelBench5" instance=ExtResource( 4 )]
+[node name="FlowerPot2" parent="SingelBench6" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0725536, 0.85071, 0 )
 
 [node name="Hud" parent="." instance=ExtResource( 6 )]
+visible = false
 
 [node name="WaterWell" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.82964, -1.49012e-07, -2.44493 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.05241, -1.49012e-07, -10.8149 )
 
 [node name="ResourceHUD" parent="." instance=ExtResource( 7 )]
+visible = false
 
 [node name="DirtPile" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.91393, 0, 8.05179 )
@@ -99,4 +105,22 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.48364, 0.0219693, 0 )
 [node name="SlotBar" parent="." instance=ExtResource( 10 )]
 
 [node name="LadyBug" parent="." instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.45383, 0, 8.26505 )
+transform = Transform( -0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -10.8309, 0, 2.83261 )
+
+[node name="LadyBugSpawner" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.4603, 0, -13.4562 )
+
+[node name="LadyBugSpawner2" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6089, 0, -21.16 )
+
+[node name="LadyBugSpawner3" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.1918, -0.0293655, -18.8585 )
+
+[node name="LadyBugSpawner4" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.4969, 0, 5.25576 )
+
+[node name="LadyBugSpawner5" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.57162, 0, -10.4116 )
+
+[node name="LocustSpawner" parent="." instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1121, 0, -26.2384 )
